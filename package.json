@@ -7,19 +7,19 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.js"
     },
     "./ai": {
+      "types": "./dist/ai.d.ts",
       "import": "./dist/ai.mjs",
-      "require": "./dist/ai.js",
-      "types": "./dist/ai.d.ts"
+      "require": "./dist/ai.js"
     },
     "./payment": {
+      "types": "./dist/payment.d.ts",
       "import": "./dist/payment.mjs",
-      "require": "./dist/payment.js",
-      "types": "./dist/payment.d.ts"
+      "require": "./dist/payment.js"
     }
   },
   "files": [
