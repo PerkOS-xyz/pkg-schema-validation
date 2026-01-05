@@ -1,0 +1,66 @@
+{
+  "name": "@perkos/schema-validation",
+  "version": "1.0.0",
+  "description": "Zod validation schemas for AI and payment services",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./ai": {
+      "import": "./dist/ai.mjs",
+      "require": "./dist/ai.js",
+      "types": "./dist/ai.d.ts"
+    },
+    "./payment": {
+      "import": "./dist/payment.mjs",
+      "require": "./dist/payment.js",
+      "types": "./dist/payment.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "tsc --noEmit",
+    "test": "vitest run",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "zod",
+    "validation",
+    "schemas",
+    "ai",
+    "payment",
+    "x402",
+    "perkos"
+  ],
+  "author": "PerkOS",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PerkOS-xyz/pkg-schema-validation.git"
+  },
+  "dependencies": {
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "peerDependencies": {
+    "zod": "^3.22.0"
+  }
+}
